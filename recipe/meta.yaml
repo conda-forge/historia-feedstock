@@ -33,6 +33,7 @@ test:
     - python {{ python_min }}
     - pytest
   source_files:
+    - pyproject.toml
     - tests
   imports:
     - historia
