@@ -26,6 +26,7 @@ requirements:
     - requests
     - tqdm
     - rich-click
+    - beartype
 
 test:
   requires:
