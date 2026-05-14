@@ -36,7 +36,7 @@ test:
   imports:
     - historia
   commands:
-    - pytest
+    - pytest -m "not remote" -c pyproject.toml
 
 about:
   home: https://github.com/codycbakerphd/historia
