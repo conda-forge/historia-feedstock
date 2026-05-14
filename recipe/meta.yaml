@@ -1,5 +1,5 @@
 {% set name = "historia" %}
-{% set version = "0.6.0" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3e273055217611f6c4516fc81615ee09ba5b072ecf2aa5705e29b13c80b6b3cc
+  sha256: b8517142b2f122fdf856b72783fd6953a7407c53d1d5fb588c3e5ff87082602a
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
-   - historia = historia._cli:historia_cli
+    - historia = historia._cli:historia_cli
 
 requirements:
   host:
@@ -26,17 +26,19 @@ requirements:
     - requests
     - tqdm
     - rich-click
+    - beartype
 
 test:
   requires:
     - python {{ python_min }}
     - pytest
   source_files:
+    - pyproject.toml
     - tests
   imports:
     - historia
   commands:
-    - pytest
+    - pytest -m "not remote" -c pyproject.toml
 
 about:
   home: https://github.com/codycbakerphd/historia
