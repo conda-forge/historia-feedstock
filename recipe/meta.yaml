@@ -28,6 +28,7 @@ requirements:
     - rich-click
     - beartype
     - pynacl
+    - pyyaml
 
 test:
   requires:
