@@ -27,7 +27,7 @@ requirements:
     - tqdm
     - rich-click
     - beartype
-    - nacl
+    - pynacl
 
 test:
   requires:
