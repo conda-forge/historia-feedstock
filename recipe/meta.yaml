@@ -1,5 +1,5 @@
 {% set name = "historia" %}
-{% set version = "0.10.11" %}
+{% set version = "0.10.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 330913bf14318ec86623f82480c1488d80b62f1e386bbdfb1428cae06cd4c479
+  sha256: f4234db5783c86f034e57be082ee6b5183edce81c943fa57a2f1129a1b755e9a
 
 build:
   number: 0
