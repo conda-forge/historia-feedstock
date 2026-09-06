@@ -1,13 +1,13 @@
 {% set name = "historia" %}
-{% set version = "0.10.12" %}
+{% set version = "0.10.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f4234db5783c86f034e57be082ee6b5183edce81c943fa57a2f1129a1b755e9a
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ecb11843a21d9ee73166307775a0fcb924c036cfb3e6ce1155b04b99effd7731
 
 build:
   number: 0
