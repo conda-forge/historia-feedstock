@@ -1,5 +1,5 @@
 {% set name = "historia" %}
-{% set version = "0.12.2" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 27d739ae7b77e26a49ddc1e9b72daf3e0518d1296be2313dac190a1ebfb8c6a7
+  sha256: eb70da5126de969f20c7eec529e3e288967d89d9416d5fbb1c0d28bb75457314
 
 build:
   number: 0
